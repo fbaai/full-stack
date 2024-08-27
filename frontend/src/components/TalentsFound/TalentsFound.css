@@ -1,0 +1,74 @@
+.talents-found-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff; /* White background for the main container */
+  }
+  
+  .talents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increase the gap for a cleaner look */
+    margin-top: 20px; /* Add some space above the list */
+  }
+  
+  .talent-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f9fc; /* Light gray-blue background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for a professional look */
+    border: 1px solid #e0e6ef; /* Light border for subtle card definition */
+    transition: transform 0.2s ease; /* Add transition for hover effect */
+  }
+  
+  .talent-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+  }
+  
+  .talent-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; /* Space between header and details */
+  }
+  
+  .talent-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333; /* Darker color for emphasis */
+  }
+  
+  .talent-title {
+    font-size: 1em;
+    color: #555; /* Subtle color for the title */
+  }
+  
+  .talent-details {
+    font-size: 0.9em;
+    color: #666; /* Standard color for detailed information */
+    margin-bottom: 15px; /* Space between details and button */
+  }
+  
+  .talent-score,
+  .talent-experience,
+  .talent-education,
+  .talent-skills {
+    margin: 5px 0; /* Space out each detail for clarity */
+  }
+  
+  .talent-action-button {
+    background-color: #007bff; /* Primary blue */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start; /* Align button to the left */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .talent-action-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  

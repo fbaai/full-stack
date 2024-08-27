@@ -1,0 +1,644 @@
+/* General styles */
+html,
+body {
+  width: 100%; /* Ensure no overflow beyond viewport */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.logo {
+    display: flex; /* Aligns logos horizontally */
+    align-items: center; /* Vertically centers logos */
+    gap: 0px; /* Adds space between logos, adjust as needed */
+}
+
+.logo img {
+    max-width: 100px; /* Sets a maximum width for logos, adjust as needed */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 50px;/* Optional: you can set a fixed height if needed */
+    /* height: 50px; */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.auth-buttons button {
+    margin-left: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.sign-in {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+    text-decoration: bold;
+}
+
+.sign-up {
+    background-color: #333;
+    color: #fff;
+}
+
+.hero {
+    text-align: center;
+    /*padding: 60px 20px;*/
+    background-color: #fff;
+    margin-bottom: 0px;
+}
+
+.hero .highlight {
+    color: #3780FF;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    text-decoration: bold;
+}
+
+.popular-categories {
+    display: flex;
+    justify-content: center; /* Centers all content */
+    align-items: center; /* Vertically centers the content */
+    margin: 20px 0;
+    color: #ADACAC;
+    gap: 30px; /* Adds space between the elements */
+}
+
+.popular-categories a {
+    text-decoration: underline;
+    color: #000000;
+}
+
+
+.statistics {
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+    margin-bottom: 0;
+    gap: 120px; /* Adjust space between each statistic */
+}
+
+.statistics div {
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.statistics h3 {
+    font-weight: normal; /* Make h3 normal font weight */
+    margin-bottom: 5px;
+}
+
+.statistics p {
+    font-weight: bold; /* Make p bold */
+    font-size: 1.5rem;
+}
+
+/* Add a horizontal line between each statistic */
+.statistics div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -50px; /* Adjust for spacing, change as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px; /* Thickness of the line */
+    height: 100%; /* Full height of the container */
+    background-color: #000000; /* Line color */
+}
+
+.latest-jobs {
+    text-align: center;
+    margin-top: 0px;
+    background-color: #fff;
+    padding: 60px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.latest-jobs .highlight {
+    color: #3780FF;
+}
+
+.job-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.job-card {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: left;
+}
+
+/* Vector */
+
+width: 50px;
+height: 24px;
+
+border: 1.5px solid #000000;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Save Button and Icon */
+.save-button {
+    position: absolute;
+    top: 50%; /* Center vertically in the job-header */
+    right: 10px; /* Adjust as needed for spacing from the right edge */
+    transform: translateY(-50%); /* Center vertically */
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    background: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    cursor: pointer;
+    display: flex; /* Center the icon */
+    align-items: center;
+    justify-content: center;
+}
+
+.save-icon {
+    width: 100%; /* Scale to fit the button */
+    height: 100%;
+    color: #000000; /* Initial color */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.save-button:hover .save-icon {
+    color: #54ACED; /* Blue color on hover */
+}
+
+.save-button:active .save-icon,
+.save-button.saved .save-icon {
+    color: #54ACED; /* Color when active or saved */
+}
+
+
+
+.job-card .job-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.job-card .company-logo {
+    width: 60px;
+    height: 50px;
+    margin-right: 10px;
+}
+.job-header-content {
+    flex: 1; /* Allows the header content to take up remaining space */
+}
+
+.job-header-container {
+    margin-right: 35px; /* Adjust to control spacing from the save button */
+    /* Optional: Set width if needed for consistent spacing */
+}
+
+
+.job-card .job-header h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+}
+
+.job-card .job-header p {
+    margin: 0;
+    color: #888;
+}
+
+.job-card .job-location {
+    margin: 10px 0;
+}
+
+.job-card .job-location p {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    color: #666;
+}
+
+.job-card .location-icon {
+    width: 10px;
+    height: 12.73px;
+    margin-right: 8px;
+}
+
+.job-card .baggage-icon {
+    width: 12px;
+    height: 10.8px;
+    margin-right: 8px;
+}
+
+.job-card .cash-icon {
+    width: 14px;
+    height: 8.4px;
+    margin-right: 8px;
+}
+
+.job-card .job-footer span {
+    display: inline-block;
+    margin-right: 15px;
+    background-color: #E7E7E7;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.6rem;
+    color: #000000;
+}
+.job-card .clock-icon {
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+}
+
+.view-all-jobs {
+    padding: 15px 30px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100;
+    margin-bottom: 70px;
+}
+
+/*newsletter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.newsletter button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+*/
+.company-class-header-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligns the items to the top */
+    margin-bottom: 20px; /* Adjust spacing as needed */
+    padding-left: 10px; /* Indents the text to the left */
+    gap: 220px;
+}
+
+.text-content {
+    max-width: 50%; /* Adjust this value to control the width of the text */
+    margin-right: 20px;
+    flex: 1;
+}
+
+.text-content h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-size: 36px;
+    text-align: left; /* Aligns the text to the left */
+}
+
+.text-content p {
+    margin: 10px 0 0;
+    line-height: 1.5;
+    max-width: 80%;
+    text-align: left; /* Aligns the text to the left */
+}
+
+.view-all-companies {
+    padding: 15px 30px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px; /* Adjusts the spacing between the button and the text */
+}
+
+
+.company-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%
+}
+
+.company-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 23%; /* Adjusted width for 4 cards per row */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    text-align: left;
+    position: relative;
+}
+
+.company-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.company-logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.company-details h2 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+}
+
+.company-details p {
+    margin: 0;
+    color: #888;
+}
+
+.company-description {
+    margin: 10px 0;
+    color: #666;
+}
+
+.company-buttons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.company-buttons button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.company-buttons button:hover {
+    background-color: #e0e0e0;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+  background-color: #10141d;
+  color: #fff;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Ensure the footer spans the full width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.footerContent {
+  max-width: 1240px; /* This controls the content width within the footer */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Ensure the content container spans full width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.callToAction {
+  text-align: center;
+  max-width: 600px; /* Control the max width of the call-to-action text */
+}
+
+.ctaTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: #4BB3FD;
+}
+
+.ctaDescription {
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.signUpButton {
+  background-color: #fff;
+  color: #10141d;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 25px 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footerDivider {
+  width: 80%;
+  height: 1px;
+  background-color: #fff;
+  margin: 60px 0;
+}
+
+.footerNavAndNewsletter {
+  display: flex;
+  justify-content: space-between;
+  width: 80%; /* Adjust as needed for layout */
+}
+
+.footerNav {
+  flex: 1;
+  text-align: left;
+}
+
+.footerNav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footerLink {
+  color: #fff;
+  text-decoration: none;
+}
+
+.newsletter {
+  flex: 1;
+  text-align: right;
+}
+
+.newsletterTitle {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.54px;
+  margin-bottom: 30px;
+}
+
+.subscribeForm {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.emailInput {
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  color: #adacac;
+  font-size: 16px;
+  padding: 20px;
+  width: 270px;
+}
+
+.submitButton {
+  background-color: #4bb3fd;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 17px 20px;
+}
+
+.submitIcon {
+  width: 10px;
+  height: 10px;
+}
+
+.footerDecoration {
+  position: absolute;
+  right: 48px;
+  top: 44px;
+  width: 103px;
+}
+
+.backgroundDecoration {
+  position: absolute;
+  left: 98px;
+  top: 131px;
+  width: 92px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .ctaTitle {
+    font-size: 40px;
+  }
+
+  .footerNavAndNewsletter {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footerNav {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footerNav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .newsletter {
+    text-align: left;
+  }
+
+  .subscribeForm {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .emailInput {
+    width: 50%;
+  }
+}

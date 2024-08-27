@@ -1,0 +1,314 @@
+/* styles.css */
+./* General Styles */
+html,
+body {
+  width: 100%; /* Ensure no overflow beyond viewport */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    width: 1200px; /* Or whatever fixed width you prefer */
+    max-width: 100%; /* This ensures it doesn't overflow on smaller screens */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+}
+
+.tab-bar {
+    display: flex;
+    justify-content: space-between; /* Align tabs horizontally and push them to opposite ends */
+    white-space: nowrap; /* Prevent tabs from wrapping */
+    margin-bottom: 0px;
+    align-items: center; /* Ensure tabs are vertically aligned in the middle */
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    /*padding: 10px 20px;*/
+    font-size: 16px;
+    font-weight: bold; /* Makes text bold */
+    cursor: pointer;
+    color: #b3b3b3;
+    transition: color 0.3s ease;
+    vertical-align: middle; /* Vertically aligns the text within the button */
+    white-space: nowrap; /* Prevent wrapping */
+    display: flex; /* Use flexbox to ensure buttons stay in one line */
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Vertically align buttons in the middle */
+    gap: 400px; /* Space out buttons horizontally */
+    flex-wrap: nowrap; /* Ensure no wrapping */
+}
+
+.tab-button.active {
+    color: #4BB3FD; /* Changes color for the active tab */
+}
+/* Layout Styles */
+.two-column-layout {
+    display: flex;
+    align-items: flex-start; /* Align columns at the top */
+}
+
+.left-column {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+.right-column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 15px;
+    padding: 15px;
+    overflow: auto; /* Adds scrollbars if content overflows */
+}
+
+.right-column .preview-section {
+    position: relative;
+    z-index: 2; /* Ensure contents are above the background */
+    opacity: 1; /* Reset opacity for text content */
+    background-color: transparent; /* Make sure the text section is transparent to show the image */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+.screenshot-image {
+  width: 100%; /* Make the image occupy the full width of the column */
+  height: 100%; /* Maintain aspect ratio */
+  margin-bottom: 0; /* Add some space below the image */
+}
+
+.image-container {
+  margin-bottom: 0; /* Add spacing around the image */
+}
+
+/* Tab Button Styles */
+.upload-btn-primary, .create-btn-primary {
+    background-color: #6EC1FD;
+    color: #000000; /* Changed text color to #000000 */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.upload-btn-cancel, .create-btn-cancel {
+    background-color: #FFFFFF;
+    color: #767676;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px; /* Space between buttons */
+    font-weight: bold;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%; /* Ensure full width */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000000; /* Changed border color to #000000 */
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding and border are included in the total width */
+}
+
+.form-group input::placeholder {
+    color: #888;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000; /* Changed border color to #000000 */
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    height: auto; /* Allows the textarea to adjust its height based on content */
+    max-height: 600px; /* Optional: restricts maximum height */
+    overflow-y: auto; /* Adds a scrollbar if needed */
+}
+
+/* Upload CV Styles */
+.upload-cv {
+  max-width: 600px; /* Restrict the maximum width of the entire form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add some space between elements */
+}
+
+.upload-cv .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Space between label and input */
+}
+
+.upload-cv .enter-desired-job-title,
+.upload-cv .upload-from-google-drive {
+  width: 100%; /* Full width to match parent container */
+  padding: 10px; /* Add padding for better aesthetics */
+  font-family: 'Inter', sans-serif; /* Font family changed to Inter */
+  font-weight: bold; /* Make text bold */
+  font-size: 16px;
+  line-height: 1.4;
+  border: 1px solid #000000; /* Border color changed to #000000 */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.upload-cv .enter-desired-job-title {
+  color: #767676;
+}
+
+.upload-info {
+  font-size: 16px;
+  color: #767676;
+  margin-top: 5px;
+}
+
+/* Common button styling */
+.upload-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* Adjust the space between text and icon */
+  padding: 10px 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: #54ACEC;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 50%;
+  margin-right: 12px;
+  margin-bottom: 10px;
+}
+
+.upload-option:hover {
+  background-color: #54ACEC; /* Hover background color */
+  color: #ffffff; /* Hover text color */
+  border-color: #54ACEC; /* Hover border color */
+}
+
+/* Specific styling for each upload option */
+.upload-from-local-storage,
+.upload-from-google-drive,
+.upload-from-dropbox {
+  background-color: #ffffff; /* Ensure background is white */
+  border: 2px solid #000000; /* Ensure border color is black */
+  color: #54ACEC; /* Ensure text color matches button color */
+  text-decoration: none;
+}
+
+.upload-from-local-storage:hover,
+.upload-from-google-drive:hover,
+.upload-from-dropbox:hover {
+  background-color: #54ACEC; /* Hover background color */
+  color: #ffffff; /* Hover text color */
+  border-color: #54ACEC; /* Hover border color */
+}
+
+.text-container {
+  flex: 1;
+  text-align: left; /* Align text to the left*/
+}
+
+.upload-option img {
+  margin-left: 10px; /* Space between text and icon */
+  margin-right: 34px; /* No extra space on the right */
+  height: auto;
+}
+
+/* Button Layout Styles */
+/* Container that holds the buttons */
+/* Container that holds the buttons */
+.button-container {
+    white-space: nowrap; /* Prevent wrapping */
+    display: flex; /* Use flexbox to ensure buttons stay in one line */
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Vertically align buttons in the middle */
+    gap: 332px; /* Space out buttons horizontally */
+    flex-wrap: nowrap; /* Ensure no wrapping */
+}
+
+/* Common button styling */
+.upload-btn-primary, .create-btn-primary, .upload-btn-cancel, .create-btn-cancel {
+    display: inline-block; /* Use inline-flex to ensure proper spacing and alignment */
+    padding: 10px 20px; /* Add padding to increase clickable area */
+    margin: 0 5px; /* Reset margin to prevent unwanted spacing */
+    vertical-align: middle; /* Align buttons vertically in the middle */
+    text-align: center; /* Center text inside the button */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+
+/* Additional Styles */
+.preview-section p {
+    margin-bottom: 20px;
+    white-space: pre-wrap; /* Preserves new lines */
+}
+
+.preview-content {
+  word-wrap: break-word; /* Ensures long words break and wrap */
+  overflow-wrap: break-word; /* Allows content to wrap within container */
+  white-space: pre-wrap; /* Retains spaces and allows wrapping */
+  background-color: #f9f9f9; /* Optional: Background color */
+  padding: 15px; /* Optional: Padding */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow */
+}
+
+.file-label {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    margin-bottom: 20px;
+    cursor: pointer;
+    flex-direction: row-reverse; /* Moves the image to the right of the text */
+}
+
+.file-icon, .icon-google-drive, .file-icon-dropbox {
+    width: 20px; /* Adjust to desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 350px; /* Space between image and text */
+}

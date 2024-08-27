@@ -1,0 +1,145 @@
+
+.footer {
+  background-color: #10141d;
+  color: #fff;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.footerContent {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.callToAction {
+  text-align: center;
+  max-width: 600px;
+}
+
+.ctaTitle {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: #4bb3fd;
+}
+
+.ctaDescription {
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.signUpButton {
+  background-color: #fff;
+  color: #10141d;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 25px 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footerDivider {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  margin: 60px 0;
+}
+
+.footerNav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.footerLink {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.newsletter {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.newsletterTitle {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.54px;
+  margin-bottom: 30px;
+}
+
+.subscribeForm {
+  display: flex;
+  gap: 10px;
+}
+
+.emailInput {
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  color: #adacac;
+  font-size: 20px;
+  padding: 20px;
+  width: 300px;
+}
+
+.submitButton {
+  background-color: #4bb3fd;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 17px 20px;
+}
+
+.submitIcon {
+  width: 10px;
+  height: 18px;
+}
+
+.footerDecoration {
+  position: absolute;
+  right: 48px;
+  top: 44px;
+  width: 103px;
+}
+
+.backgroundDecoration {
+  position: absolute;
+  left: 98px;
+  top: 131px;
+  width: 92px;
+}
+
+@media (max-width: 991px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .ctaTitle {
+    font-size: 40px;
+  }
+
+  .footerNav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .subscribeForm {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .emailInput {
+    width: 100%;
+  }
+}

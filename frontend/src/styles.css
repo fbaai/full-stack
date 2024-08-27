@@ -1,0 +1,536 @@
+/* styles.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-bar {
+    display: flex;
+    justify-content: flex-start; /* Aligns tabs to the left */
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    margin-right: 10px; /* Space between buttons */
+    cursor: pointer;
+    background-color: #597081;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.tab-button.active {
+    background-color: #007BFF;
+}
+
+.two-column-layout {
+    display: flex;
+    align-items: flex-start; /* Align columns at the top */
+}
+
+.left-column {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+.right-column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+.form-content {
+    margin-top: 20px;
+}
+
+.preview-content h2 {
+    margin-bottom: 10px;
+}
+
+.preview-section {
+    margin-top: 10px;
+}
+
+/* Add any additional styles needed for your forms */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+    overflow-wrap: break-word;
+}
+
+textarea {
+    resize: vertical; /* Allows vertical resizing */
+    height: 150px; /* Initial height for better usability */
+    white-space: pre-wrap; /* Preserves new lines and white spaces */
+    word-wrap: break-word;
+}
+
+.upload-btn-primary, .create-btn-primary {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.upload-btn-cancel, .create-btn-cancel {
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px; /* Space between buttons */
+}
+form-group input {
+    width: 40%; /* Makes input fields span the full width of their container */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding and border are included in the total width */
+
+}
+
+.form-group input::placeholder {
+    color: #888;
+}
+
+.upload-cv {
+  max-width: 400px; /* Restrict the maximum width of the entire form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add some space between elements */
+}
+
+.upload-cv {
+  max-width: 600px; /* Restrict the maximum width of the entire form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add some space between elements */
+}
+
+.upload-cv .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Space between label and input */
+}
+
+.upload-cv .enter-desired-job-title,
+.upload-cv .upload-from-google-drive {
+  width: 100%; /* Full width to match parent container */
+  padding: 10px; /* Add padding for better aesthetics */
+  font-family: var(--body-strong-font-family, 'Inter');
+  font-weight: var(--body-strong-font-weight, 600);
+  font-size: var(--body-strong-font-size, 16px);
+  line-height: var(--body-strong-line-height, 1.4);
+  border: 1px solid #ddd; /* Consistent border for both elements */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.upload-cv .enter-desired-job-title {
+  color: #767676;
+}
+
+.upload-cv .frame-12 {
+  margin-right: 2px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.upload-cv .frame-10 {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.upload-cv .upload-options {
+  margin-bottom: 11px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: var(--heading-font-family, 'Inter');
+  font-weight: var(--heading-font-weight, 600);
+  font-size: var(--heading-font-size, 24px);
+  letter-spacing: var(--heading-letter-spacing, -0.5px);
+  line-height: var(--heading-line-height, 1.2);
+  color: #000000;
+}
+.upload-cv .frame-4 {
+  border-radius: 5px;
+  border: 1px solid #000000;
+  background: #FFFFFF;
+  margin-bottom: 11px;
+  display: flex;
+  flex-direction: row;
+  padding: 7px 0 8px 7px;
+  width: 362px;
+  box-sizing: border-box;
+}
+.upload-cv .upload-from-local-storage {
+  margin-right: 13.2px;
+  overflow-wrap: break-word;
+  font-family: var(--body-strong-font-family, 'Inter');
+  font-weight: var(--body-strong-font-weight, 600);
+  font-size: var(--body-strong-font-size, 16px);
+  line-height: var(--body-strong-line-height, 1.4);
+  color: #54ACEC;
+}
+.upload-cv .icon-upload {
+  margin: 0.5px 0;
+  display: flex;
+  width: 24px;
+  height: 20.9px;
+  box-sizing: border-box;
+}
+.upload-cv .vector {
+  width: 24px;
+  height: 20.9px;
+}
+.upload-cv .frame-6 {
+  border-radius: 5px;
+  border: 1px solid #000000;
+  background: #FFFFFF;
+  margin-bottom: 11px;
+  display: flex;
+  flex-direction: row;
+  padding: 7.5px 0 7.5px 7px;
+  width: 362px;
+  box-sizing: border-box;
+}
+.upload-cv .upload-from-google-drive {
+  margin-right: 12.4px;
+  overflow-wrap: break-word;
+  font-family: var(--body-strong-font-family, 'Inter');
+  font-weight: var(--body-strong-font-weight, 600);
+  font-size: var(--body-strong-font-size, 16px);
+  line-height: var(--body-strong-line-height, 1.4);
+  color: #54ACEC;
+}
+.upload-cv .icon-google-drive {
+  margin: 1.3px 0;
+  display: flex;
+  width: 25.4px;
+  height: 19.3px;
+  box-sizing: border-box;
+}
+.upload-cv .vector-1 {
+  width: 25.4px;
+  height: 19.3px;
+}
+.upload-cv .frame-8 {
+  border-radius: 5px;
+  border: 1px solid #000000;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 7.8px 0 7.2px 7px;
+  width: 362px;
+  box-sizing: border-box;
+}
+.upload-cv .upload-from-dropbox {
+  margin: 0 11px 0px 0;
+  display: inline-block;
+  width: 165px;
+  overflow-wrap: break-word;
+  font-family: var(--body-strong-font-family, 'Inter');
+  font-weight: var(--body-strong-font-weight, 600);
+  font-size: var(--body-strong-font-size, 16px);
+  line-height: var(--body-strong-line-height, 1.4);
+  color: #54ACEC;
+}
+.upload-cv .icondropbox-fill {
+  margin-top: 0.2px;
+  display: flex;
+  width: 30px;
+  height: 21.8px;
+  box-sizing: border-box;
+}
+.upload-cv .vector-2 {
+  width: 30px;
+  height: 21.8px;
+}
+.upload-cv .frame-11 {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.upload-cv .we-accept-docx-pdf-txt-files-upto-2-mb-it-is-expected-for-your-cv-to-be-within-2-pages {
+  margin-bottom: 37.5px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: var(--body-small-font-family, 'Inter');
+  font-weight: var(--body-small-font-weight, 400);
+  font-size: var(--body-small-font-size, 14px);
+  line-height: var(--body-small-line-height, 1.4);
+  color: #B3B3B3;
+}
+.upload-cv .vector-6 {
+  width: 576px;
+  height: 0px;
+}
+.upload-cv .frame-15 {
+  margin-right: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 578px;
+  box-sizing: border-box;
+}
+.upload-cv .frame-14 {
+  border-radius: 5px;
+  background: #6EC1FD;
+  display: flex;
+  padding: 8px 15.9px 9px 14px;
+  box-sizing: border-box;
+}
+.upload-cv .upload-cv-1 {
+  overflow-wrap: break-word;
+  font-family: var(--body-small-strong-font-family, 'Inter');
+  font-weight: var(--body-small-strong-font-weight, 600);
+  font-size: var(--body-small-strong-font-size, 14px);
+  line-height: var(--body-small-strong-line-height, 1.4);
+  color: #1E1E1E;
+}
+.upload-cv .cancel {
+  margin: 8.5px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: var(--body-small-strong-font-family, 'Inter');
+  font-weight: var(--body-small-strong-font-weight, 600);
+  font-size: var(--body-small-strong-font-size, 14px);
+  line-height: var(--body-small-strong-line-height, 1.4);
+  color: #767676;
+}
+
+
+.file-label {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    margin-bottom: 20px;
+    cursor: pointer;
+    flex-direction: row-reverse; /* Moves the image to the right of the text */
+}
+
+.file-icon, .icon-google-drive, .file-icon-dropbox {
+    width: 20px; /* Adjust to desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.upload-btn {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 40%; /* Makes input fields span the full width of their container */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding and border are included in the total width */
+
+}
+
+.form-group input::placeholder {
+    color: #888;
+}
+
+.upload-cv {
+  max-width: 400px; /* Restrict the maximum width of the entire form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add some space between elements */
+}
+
+.upload-cv {
+  max-width: 600px; /* Restrict the maximum width of the entire form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add some space between elements */
+}
+
+.upload-cv .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Space between label and input */
+}
+
+.upload-cv .enter-desired-job-title,
+.upload-cv .upload-from-google-drive {
+  width: 100%; /* Full width to match parent container */
+  padding: 10px; /* Add padding for better aesthetics */
+  font-family: var(--body-strong-font-family, 'Inter');
+  font-weight: var(--body-strong-font-weight, 600);
+  font-size: var(--body-strong-font-size, 16px);
+  line-height: var(--body-strong-line-height, 1.4);
+  border: 1px solid #ddd; /* Consistent border for both elements */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.upload-cv .enter-desired-job-title {
+  color: #767676;
+}
+
+.upload-cv .upload-from-google-drive {
+  color: #54ACEC;
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  text-align: center; /* Center text inside the button */
+  background-color: #f7f7f7; /* Light background color for button */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.upload-cv .upload-from-google-drive:hover {
+  background-color: #e0e0e0; /* Darker shade on hover */
+}
+
+
+.page-wrapper {
+    width: 1200px; /* Or whatever fixed width you prefer */
+    max-width: 100%; /* This ensures it doesn't overflow on smaller screens */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+}
+
+.container {
+    width: 100%;
+}
+
+.two-column-layout {
+    display: flex;
+}
+
+.left-column {
+    flex: 1;
+    padding: 20px;
+}
+
+.right-column {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Additional styles to ensure large gaps in the preview sections */
+./* Additional styles to ensure large gaps in the preview sections */
+.preview-section p {
+    margin-bottom: 20px;
+    white-space: pre-wrap; /* Preserves new lines */
+}
+
+.preview-section {
+    padding: 10px;
+}
+
+/* Style for the right column with faded background image */
+.right-column {
+    background-image: url('C:/Users/ACER/PycharmProjects/CVUploadingPage2/images/Screenshot (495).png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.right-column .preview-section {
+    position: relative;
+    z-index: 2; /* Ensure contents are above the background */
+    opacity: 1; /* Reset opacity for text content */
+    background-color: transparent; /* Make sure the text section is transparent to show the image */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    height: auto; /* Allows the textarea to adjust its height based on content */
+    max-height: 600px; /* Optional: restricts maximum height */
+    overflow-y: auto; /* Adds a scrollbar if needed */
+}
+
+.form-group textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+.preview-section pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: inherit;
+    margin: 0;
+}

@@ -1,0 +1,4 @@
+DATABASE_URI="mysql+pymysql://root:[password]@localhost/[db_name]"
+SECRET_KEY="sec key"
+JWT_SECRET_KEY="key jwt"
+FRONTEND_URL=http://localhost:3000
