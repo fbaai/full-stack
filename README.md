@@ -1,3 +1,5 @@
+setup mysql and use the myapp_db.sql file to import the database in your mysql environment
+
 backend is in backend directory which is based on python flask run it first:
 
 1. navigate to backend:
